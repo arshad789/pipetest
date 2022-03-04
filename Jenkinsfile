@@ -8,7 +8,7 @@ pipeline{
     }
     stage('test') {
         step{
-            sh ''';
+            sh '''
             sleep5
             echo "this is Test test1"
             '''
