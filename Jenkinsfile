@@ -2,7 +2,7 @@ pipeline{
     agent any
     stage('Build') {
         step{
-            sh 'sleep4; echo "this is Build test"
+            sh 'sleep4'
 
         }
     }
