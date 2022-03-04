@@ -1,13 +1,13 @@
-pipeline{
+pipeline {
     agent any
     stage('Build') {
-        step{
+        step {
             sh 'sleep4'
 
         }
     }
     stage('test') {
-        step{
+        step {
             sh '''
             sleep5
             echo "this is Test test1"
@@ -16,7 +16,7 @@ pipeline{
         }
     }
     stage('Deploy'){
-        step{
+        step {
             sh '''
             echo "this is Deploy test"
             '''
@@ -24,7 +24,7 @@ pipeline{
         }
     }
     stage('test stage'){
-        step{
+        step {
             sh ' echo "tesing" '
         }
     }
