@@ -1,26 +1,9 @@
-	pipeline {
-			agent any 
-			stages {
-				stage('Build') {
-					steps {
-					
-					}
-				}
-				stage('Test'){
-					steps {
-					
-					}
-				}
-				stage('Deploy'){
-					steps {
-					
-					}
-				}
-				stage('My-stage'){
-					steps {
-					
-					}
-				}	
-			}
-		}
+pipeline {
+	agent any
+	stages {
+		stage ('Build') {
+			sh 'echo "this is for test"'
+		} 
 		
+	}
+}
