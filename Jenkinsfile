@@ -1,40 +1,26 @@
-pipeline {
-	agent { label 'master' } 
-	stages {
-		stage('Both build and test') {
-			parallel {
-				stage('Build') { 
+	pipeline {
+			agent any 
+			stages {
+				stage('Build') {
 					steps {
-						sh 'sleep 15; echo "This is a Build stage"'
+					
 					}
 				}
-				
 				stage('Test'){
 					steps {
-						sh '''
-							sleep 15
-							echo "This is a Test stage"
-						'''	
-						git branch: 'main', url: 'https://github.com/jaintpharsha/devops-jan-22.git'
+					
 					}
 				}
-			} 
-		}
-		stage('Deploy'){
-			steps {
-				sh '''
-					sleep 5
-					echo "This is a Deploy stage"
-				'''
+				stage('Deploy'){
+					steps {
+					
+					}
+				}
+				stage('My-stage'){
+					steps {
+					
+					}
+				}	
 			}
 		}
 		
-		stage('My-stage'){
-			steps {
-				sh '''
-					sleep 5
-					echo "This is a My-stage stage"
-				'''
-			}
-		}	
-	}
